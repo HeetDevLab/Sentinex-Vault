@@ -1,0 +1,38 @@
+/* Sentinex Vault — shared premium family styling */
+:root{--vault-bg:#050b18;--vault-panel:#0b172b;--vault-line:rgba(82,185,255,.19);--vault-cyan:#35dcff;--vault-blue:#438bff;--vault-text:#f3f8ff;--vault-muted:#a5b6ce}
+html{scroll-padding-top:90px}
+body{background:radial-gradient(ellipse at 12% 8%,rgba(35,123,255,.17),transparent 35%),radial-gradient(ellipse at 88% 25%,rgba(36,214,255,.09),transparent 30%),linear-gradient(180deg,#071326,#040a16 62%,#030711);color:var(--vault-text)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(120,190,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(120,190,255,.06) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 78%)}
+.navbar{background:rgba(4,10,22,.8);border-bottom:1px solid var(--vault-line);backdrop-filter:blur(18px)}
+.brand-mark,.app-icon,.feature-icon,.status-panel{box-shadow:0 0 25px rgba(53,220,255,.12),inset 0 1px rgba(255,255,255,.08)}
+.hero{position:relative;isolation:isolate;padding-top:clamp(88px,12vw,145px);padding-bottom:clamp(58px,8vw,100px)}
+.hero:before{content:"";position:absolute;z-index:-1;width:min(760px,95vw);height:min(760px,95vw);border:1px solid rgba(70,190,255,.13);border-radius:50%;top:-410px;left:50%;transform:translateX(-50%);box-shadow:0 0 0 75px rgba(55,160,255,.018),0 0 0 150px rgba(55,160,255,.012)}
+.hero-content{gap:clamp(28px,5vw,64px)}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;letter-spacing:-.06em}
+.gradient-text{background:linear-gradient(100deg,#f4fbff 4%,#75eaff 48%,#7ea8ff 95%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-copy p,.section-head p,.feature-card p,.info-panel p,.faq-answer{color:var(--vault-muted)}
+.hero-art{filter:drop-shadow(0 28px 65px rgba(0,0,0,.3))}
+#shield,.shield,.app-icon{border:1px solid rgba(85,204,255,.28)}
+.floating-chip,.hero-note,.status-panel,.feature-card,.info-panel,.faq-item,.cta-box{
+ border:1px solid var(--vault-line);background:linear-gradient(145deg,rgba(15,36,65,.88),rgba(7,18,35,.88));
+ box-shadow:0 18px 55px rgba(0,0,0,.17),inset 0 1px rgba(255,255,255,.04);backdrop-filter:blur(14px)
+}
+.btn{border-radius:13px;transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
+.btn:hover,.nav-cta:hover{transform:translateY(-3px);filter:brightness(1.08);box-shadow:0 18px 40px rgba(35,160,255,.2)}
+.trust-strip{border-block:1px solid var(--vault-line);background:rgba(8,20,38,.48)}
+.section{padding-block:clamp(58px,8vw,96px)}
+.section-head{margin-bottom:28px}
+.section-head h2,.cta-box h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;letter-spacing:-.045em}
+.feature-card,.info-panel,.faq-item{border-radius:20px;transition:transform .24s ease,border-color .24s ease,background .24s ease}
+.feature-card:hover,.faq-item:hover{transform:translateY(-5px);border-color:rgba(53,220,255,.42);background:linear-gradient(145deg,rgba(17,43,76,.94),rgba(8,22,43,.92))}
+.feature-icon{border:1px solid var(--vault-line);background:rgba(45,192,255,.09);border-radius:15px}
+.faq-question{color:#f4f8ff}
+.faq-answer{line-height:1.75}
+.cta-box{border-radius:26px;padding:clamp(26px,5vw,52px)}
+.footer{border-top:1px solid var(--vault-line)}
+a:focus-visible,button:focus-visible{outline:3px solid rgba(53,220,255,.72);outline-offset:3px}
+@keyframes vault-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-art .orb,.hero-art .halo{animation:vault-float 8s ease-in-out infinite}
+@media(max-width:760px){.hero{padding-top:92px}.hero-content{grid-template-columns:1fr}.hero-art{max-width:430px;margin:20px auto 0}.section{padding-block:56px}}
+@media(max-width:520px){.wrap{width:calc(100% - 28px)}.hero h1{font-size:clamp(2.35rem,12vw,3.6rem)}.hero-actions{display:grid;grid-template-columns:1fr}.btn{width:100%;justify-content:center}.trust-strip{padding-inline:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
